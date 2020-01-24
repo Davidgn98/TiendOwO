@@ -8,25 +8,19 @@ import java.util.*;
 public class Pedido
 {
     private Scanner sc;
-    /**
-     * Constructor for objects of class Pedido
-     */
+    HashMap<String, Integer> hash;
     public Pedido()
     {
         sc = new Scanner(System.in); 
+        hash = new HashMap();
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
     public void recibo()
     {
         boolean bool=false; 
         while(!bool)
-        {System.out.println("Introduzca su nombre");
+        {
+            System.out.println("Introduzca su nombre");
             String nombre=sc.nextLine();
             System.out.println("vale, " +nombre+ " introduzca su dirección");
             String direccion=sc.nextLine();
@@ -43,7 +37,6 @@ public class Pedido
                 System.out.println(".............................");
                 bool=true;
             }
-
         } 
     }
 }

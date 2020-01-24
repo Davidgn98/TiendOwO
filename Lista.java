@@ -7,28 +7,28 @@ import java.util.*;
  */
 public class Lista
 {
-    Scanner sc;
+    Scanner sc = new Scanner(System.in);
     Producto obj;
     ArrayList<String> array;
     HashMap<String, Integer> hash;
-    /**
-     * Constructor de la clase lista
-     */
+    Pedido obj2;
+    
     public Lista()
     {
-        sc = new Scanner(System.in);
         obj = new Producto();
         array = new ArrayList();
         hash = new HashMap();
+        obj2 = new Pedido();
+        
     }
 
+    
     /**
      * Método que contiene un menú de la compra y devuelve un HahMap con los productos y cantidades comprados
      * 
      * 
-     * @return     HashMap con los productos comprados y la cantidad 
      */
-    public HashMap<String, Integer> menu()
+    public void menu()
     {
         boolean bool = false;
         boolean bool2 = false;
@@ -68,14 +68,27 @@ public class Lista
                         bool2 = true;
                     }
                 }
+                obj2.recibo();
+                listar(hash);
+                bool = true;
                 break;
                 case("3"):
                 bool = true;
                 break;
                 default:
                 System.out.println("No es una opción válida");
+                break;
             }
         }
-        return hash;
+    }
+    
+    public void listar(HashMap<String, Integer> hash)
+    {
+        Iterator <String> it = hash.keySet().iterator();
+        while(it.hasNext())
+        {
+            String pedido = it.next();
+            System.out.println("Producto: "+pedido+"\tCantidad: "+hash.get(pedido));
+        }
     }
 }
