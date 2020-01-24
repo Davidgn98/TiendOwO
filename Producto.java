@@ -1,6 +1,6 @@
 import java.util.*;
 /**
- * Write a description of class Producto here.
+ * Clase que contiene el metodo ver lista utilizado en la clase lista
  * 
  * @author (Raquel) 
  * @version (24.01.2020 1.0v)

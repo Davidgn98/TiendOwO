@@ -3,7 +3,7 @@ import java.util.*;
  * Esta clase realiza el proceso de venta y guarda el producto y la cantidad
  * 
  * @author (David) 
- * @version (24/01/2020 1.0v)
+ * @version (24.01.2020 1.0v)
  */
 public class Lista
 {
@@ -13,6 +13,9 @@ public class Lista
     HashMap<String, Integer> hash;
     Pedido obj2;
     
+    /**
+     * Constructor de la clase lista
+     */
     public Lista()
     {
         obj = new Producto();
@@ -21,10 +24,9 @@ public class Lista
         obj2 = new Pedido();
         
     }
-
     
     /**
-     * Método que contiene el menú de la compra y 
+     * Método que contiene el menú de la compra
      */
     public void menu()
     {
@@ -80,6 +82,10 @@ public class Lista
         }
     }
     
+    /**
+     * Método que recorre un HashMap e imprime su contenido
+     * @param HashMap<String, Integer>
+     */
     public void listar(HashMap<String, Integer> hash)
     {
         Iterator <String> it = hash.keySet().iterator();

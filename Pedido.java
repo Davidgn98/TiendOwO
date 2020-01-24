@@ -1,9 +1,9 @@
 import java.util.*;
 /**
- * Write a description of class Pedido here.
+ * Clase que contiene el metodo recibo que se utiliza en la clase Lista
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Raquel) 
+ * @version (24.01.2020 1.0v)
  */
 public class Pedido
 {
@@ -15,6 +15,9 @@ public class Pedido
         hash = new HashMap();
     }
 
+    /**
+     * Este método imprime un tiquet con los datos introducidos
+     */
     public void recibo()
     {
         boolean bool=false; 
