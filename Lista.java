@@ -84,7 +84,7 @@ public class Lista
     
     /**
      * Método que recorre un HashMap e imprime su contenido
-     * @param HashMap<String, Integer>
+     * @param HashMap<String, Integer> hash
      */
     public void listar(HashMap<String, Integer> hash)
     {

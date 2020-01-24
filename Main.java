@@ -20,7 +20,8 @@ public class Main
     /**
      * Metodo main que inicia el programa
      * 
-     * @param  args   Un array de Strings para que funcione el metodo main 
+     * @param  String[] args
+     * Un array de Strings para que funcione el metodo main 
      */
     public static void main(String[] args)
     {
