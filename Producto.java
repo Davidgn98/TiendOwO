@@ -1,33 +1,31 @@
-
+import java.util.*;
 /**
  * Write a description of class Producto here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Raquel) 
+ * @version (24.01.2020 1.0v)
  */
 public class Producto
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    private ArrayList<String> productos;
     /**
-     * Constructor for objects of class Producto
+     * Constructor de producto.
      */
     public Producto()
     {
-        // initialise instance variables
-        x = 0;
+        productos= new ArrayList<String>();
+        productos.add("Patata");
+        productos.add("Platano");
+        productos.add("Tomate");
+        productos.add("Aguacate");
+        productos.add("Lechuga");
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Este metodo sirve para poder ver los productos del ArrayList
      */
-    public int sampleMethod(int y)
+    public ArrayList<String> verLista()
     {
-        // put your code here
-        return x + y;
+        return productos;
     }
 }
