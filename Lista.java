@@ -1,33 +1,81 @@
-
+import java.util.*;
 /**
- * Write a description of class Lista here.
+ * Esta clase realiza el proceso de venta y guarda el producto y la cantidad
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (David) 
+ * @version (24/01/2020 1.0v)
  */
 public class Lista
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    Scanner sc;
+    Producto obj;
+    ArrayList<String> array;
+    HashMap<String, Integer> hash;
     /**
-     * Constructor for objects of class Lista
+     * Constructor de la clase lista
      */
     public Lista()
     {
-        // initialise instance variables
-        x = 0;
+        sc = new Scanner(System.in);
+        obj = new Producto();
+        array = new ArrayList();
+        hash = new HashMap();
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Método que contiene un menú de la compra y devuelve un HahMap con los productos y cantidades comprados
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * 
+     * @return     HashMap con los productos comprados y la cantidad 
      */
-    public int sampleMethod(int y)
+    public HashMap<String, Integer> menu()
     {
-        // put your code here
-        return x + y;
+        boolean bool = false;
+        boolean bool2 = false;
+        while(!bool)
+        {
+            System.out.println("------MENU------");
+            System.out.println("1. Ver Productos");
+            System.out.println("2. Pedir Producto");
+            System.out.println("3. Salir");
+            String respuesta = sc.next();
+            switch(respuesta)
+            {
+                case("1"):
+                System.out.println(obj.verLista());
+                break;
+                case("2"):
+                bool2 = false;
+                while(!bool2)
+                {
+                    array = obj.verLista();
+                    System.out.println("¿Qué producto quieres pedir?");
+                    String respuesta2 = sc.next();
+                    if(array.contains(respuesta2))
+                    {
+                        System.out.println("¿Qué cantidad quieres pedir?");
+                        int cantidad = sc.nextInt();
+                        hash.put(respuesta2, cantidad);
+                    }
+                    else
+                    {
+                        System.out.println("El producto introducido no existe");
+                    }
+                    System.out.println("¿Desea pedir otro producto?");
+                    String respuesta3 = sc.next();
+                    if(respuesta3.equalsIgnoreCase("no"))
+                    {
+                        bool2 = true;
+                    }
+                }
+                break;
+                case("3"):
+                bool = true;
+                break;
+                default:
+                System.out.println("No es una opción válida");
+            }
+        }
+        return hash;
     }
 }
