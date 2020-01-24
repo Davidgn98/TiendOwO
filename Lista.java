@@ -24,9 +24,7 @@ public class Lista
 
     
     /**
-     * Método que contiene un menú de la compra y devuelve un HahMap con los productos y cantidades comprados
-     * 
-     * 
+     * Método que contiene el menú de la compra y 
      */
     public void menu()
     {
