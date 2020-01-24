@@ -27,13 +27,13 @@ public class Pedido
         boolean bool=false; 
         while(!bool)
         {System.out.println("Introduzca su nombre");
-            String nombre=sc.next();
+            String nombre=sc.nextLine();
             System.out.println("vale, " +nombre+ " introduzca su dirección");
-            String direccion=sc.next();
+            String direccion=sc.nextLine();
             System.out.println("¿son estos datos correctos?");
             System.out.println("nombre: " +nombre);
             System.out.println("dirección: " +direccion);
-            String respuesta=sc.next();
+            String respuesta=sc.nextLine();
             if(respuesta.equalsIgnoreCase("si"))
             {
                 System.out.println("Gracias por su compra");
